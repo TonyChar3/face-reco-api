@@ -26,6 +26,7 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
+app.get('/', (req, res) => { res.send('its working') })
 app.post('/signin', (req, res) => { handleSignin(req, res, db, bcrypt) })
 
 app.post('/register', (req, res) => { handleRegister(req, res, db, bcrypt) })
